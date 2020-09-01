@@ -1,0 +1,113 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a:hover{
+	text-decoration: none;
+}
+/* font-family: 'Gugi', cursive;
+font-family: 'Rajdhani', sans-serif; */
+/*=========================== Class Perso ========================== */
+.txt-maj{
+  text-transform: uppercase;
+}
+.ovh{
+	overflow: hidden;
+}
+.z-iup{
+	z-index: 8000;
+}
+.rltv{
+ position: relative;
+ }
+ .ablst{
+ position: absolute;
+ }
+ .h-100{
+ height: 100%;
+ }
+ .w-100{
+ width: 100%;
+ }
+ .m-auto{
+	 margin: auto;
+ }
+ .curs-p{
+	 cursor: pointer;
+ }
+ .brd{
+ border: 2px solid red;
+ }
+ .pall-15{
+ padding: 15px;
+ }
+ .mall-15{
+ margin: 15px;
+ }
+ .txt-pc{
+ color: white;
+ }
+ .txt-sc{
+ color: orange;
+ }
+ .flx-ac{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ }
+ .dis-none{
+	 display: none;
+ }
+ .da-blk{
+	 display: block;
+ }
+ .txt-c{
+	 text-align: center;
+ }
+.fw-b{
+	font-weight: bold;
+}

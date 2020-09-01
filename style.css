@@ -1,0 +1,210 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: 'Solway', serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*======================*/
+/*=====Main Nav=========*/
+/*======================*/
+.encard-logo-main-nav{
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
+.encard-logo-main-nav img{
+  width: 100%;
+  height: 100%;
+}
+.main-nav{
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #374857;
+}
+.menu-main{
+  height: 100%;
+}
+.main-nav .menu-main ul{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.main-nav .menu-main li{
+  cursor: pointer;
+  font-size: 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+}
+.main-nav .menu-main li:hover{
+  transition: all .2s ease-in-out;
+  background: #910003;
+}
+.main-nav .menu-main a{
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+.main-nav .menu-main a:hover{
+  text-decoration: none;
+  color: white;
+}
+.main-nav .menu-main a p{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*======================*/
+/*====Home-Section======*/
+/*======================*/
+.encard-logo-header{
+  width: 800px;
+  height: 400px;
+}
+.encard-logo-header svg{
+  width: 100%;
+  height: 100%;
+}
+
+.home-section{
+  background-image: url('cgi-print/templates/asset/img/bg-print.jpg');
+  background-size: cover;
+  color: white;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-section h1{
+  font-size: 56px;
+  margin-top: 50px;
+}
+.home-section h2{
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.home-section h2 span{
+  font-family: 'Bree Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+
+}
+/*======================*/
+/*=======Footer=========*/
+/*======================*/
+footer{
+  background: #374857;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.encard-logo-footer{
+  width: 120px;
+  height: 60px;
+}
+.encard-logo-footer svg{
+  width: 100%;
+  height: 100%;
+}
+.footer-nav .menu-footer li{
+  margin: 10px;
+  text-align: right;
+}
+
+.footer-nav .menu-footer a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-nav .menu-footer a:hover{
+  color: white;
+  text-decoration: underline;
+}
+/*======================*/
+/*=======other=========*/
+/*======================*/
+.other-section{
+  height: 90vh;
+  background-image: url('cgi-print/templates/asset/img/bg-print.jpg');
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.other-section h1{
+  font-size: 56px;
+  margin-top: 50px;
+}
+.other-section h2{
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.other-section h2 span{
+  font-family: 'Bree Serif', serif;
+  font-style: italic;
+  font-weight: bold;
+
+}
+.other-section p{
+  width: 80vw;
+  padding: 25px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
