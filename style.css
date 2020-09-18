@@ -208,3 +208,8 @@ footer{
   margin: auto;
   background: rgba(0, 0, 0, 0.5);
 }
+.encard-carrousel{
+	height: 250px;
+	width: 250px;
+	border: 2px solid red;
+}

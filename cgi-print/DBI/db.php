@@ -1,7 +1,7 @@
 <?php
-$host = 'localhost';
-$dbname = 'print_r';
+$host = 'localhost:8889';
+$dbname = 'printr';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
  ?>

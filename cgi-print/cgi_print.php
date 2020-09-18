@@ -103,7 +103,25 @@ if ($_SESSION['login'] == $data['login'] && $_SESSION['password'] == $data['pass
 
 
   }
+  // Fonction pour ajouter script js dans la db
+  function addJavascript($nom_js, $type_js, $path_js, $nom_module){
+    require 'DBI/db.php';
+    require 'DBI/dbi.php';
+    $test_js_carrousel = true;
+    $query_carrousel_test_js = $dbh->prepare('SELECT nom_js FROM javascript');
+    if ($query_carrousel_test_js->execute()) {
+      while ($test_carrousel_js = $query_carrousel_test_js->fetch()) {
+        if ($test_carrousel_js['nom_js'] == $nom_js) {
+          $test_js_carrousel = false;
+        }
+      }
+    }
 
+    if ($test_js_carrousel == true) {
+      $query_insert_js = $dbh->prepare('INSERT INTO javascript (nom_js, where_js, path_js, nom_module) VALUES (?,?,?,?)');
+      $query_insert_js->execute([$nom_js, $type_js, $path_js, $nom_module]);
+    }
+  }
 
 
 }else{

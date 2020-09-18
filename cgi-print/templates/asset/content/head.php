@@ -1,3 +1,11 @@
+<?php
+  //Requete Activation script JS
+  $javascript_printr = [];
+  require 'cgi-print/DBI/db.php';
+  require 'cgi-print/DBI/dbi.php';
+  
+ ?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>

@@ -78,7 +78,7 @@ if (!empty($_POST['crea_page'])) {
           $content_template_inject = "<div><p>Hello</p></div>";
           file_put_contents($route_template_inject, $content_template_inject);
           $route_page_init = "../".$_POST['page_name'].".php";
-          $content_page_init = "<?php require 'cgi-print/DBI/db.php'; require 'cgi-print/DBI/dbi.php'; require 'cgi-print/templates/services/function_menu.php'; require 'cgi-print/templates/asset/content/head.php'; require 'cgi-print/templates/template_".$_POST['page_name'].".php'; require 'cgi-print/templates/asset/content/footer.php';?>";
+          $content_page_init = "<?php require 'cgi-print/DBI/db.php'; require 'cgi-print/DBI/dbi.php'; require 'cgi-print/cgi-front.php'; require 'cgi-print/templates/services/function_menu.php'; require 'cgi-print/templates/asset/content/head.php'; require 'cgi-print/templates/template_".$_POST['page_name'].".php'; require 'cgi-print/templates/asset/content/footer.php';?>";
           file_put_contents($route_page_init, $content_page_init);
 
           $na = "NULL";

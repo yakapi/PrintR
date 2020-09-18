@@ -5,29 +5,29 @@ if (!empty($_POST)) {
   if (!empty($_POST['action_creamod'])) {
     if ($_POST['action_creamod'] == "createdmod") {
       if (!empty($_POST['creamod_name'])) {
-        $verif_namemod = false;
-        $query_verif_namemod = $dbh->prepare('SELECT module_name from module');
-        $query_verif_namemod->execute();
-        while ($data_verif_namemod = $query_verif_namemod->fetch()) {
-          if ($_POST['creamod_name'] == $data_verif_namemod['module_name']) {
-            $verif_namemod = true;
-          }
-        }
+        // $verif_namemod = false;
+        // $query_verif_namemod = $dbh->prepare('SELECT module_name from module');
+        // $query_verif_namemod->execute();
+        // while ($data_verif_namemod = $query_verif_namemod->fetch()) {
+        //   if ($_POST['creamod_name'] == $data_verif_namemod['module_name']) {
+        //     $verif_namemod = true;
+        //   }
+        // }
         if ($verif_namemod != true) {
-          $path_folder_mod = "templates/modules/".$_POST['creamod_name'];
-          mkdir($path_folder_mod);
-          $route_inject = "templates/modules/".$_POST['creamod_name']."/functions_".$_POST['creamod_name'].".php";
-          $content_inject = 'function my_function(){}';
-          file_put_contents($route_inject, $content_inject);
-          $route_inject_setting = "templates/modules/".$_POST['creamod_name']."/settings_".$_POST['creamod_name'].".php";
-          $content_inject_setting = '<div class="'.$_POST['creamod_name'].'-screen"></div>';
-          file_put_contents($route_inject_setting, $content_inject_setting);
-          $query_new_module = $dbh->prepare('INSERT INTO module (module_name, module_route, module_route_view, module_describe) VALUES (:name, :route, :routeview, :describe)');
-          $query_new_module->bindParam(':name', $_POST['creamod_name']);
-          $query_new_module->bindParam(':route', $route_inject_setting);
-          $query_new_module->bindParam(':routeview', $route_inject);
-          $query_new_module->bindParam(':describe', $_POST['describe_namemod']);
-          $query_new_module->execute();
+          // $path_folder_mod = "templates/modules/".$_POST['creamod_name'];
+          // mkdir($path_folder_mod);
+          // $route_inject = "templates/modules/".$_POST['creamod_name']."/functions_".$_POST['creamod_name'].".php";
+          // $content_inject = 'function my_function(){}';
+          // file_put_contents($route_inject, $content_inject);
+          // $route_inject_setting = "templates/modules/".$_POST['creamod_name']."/settings_".$_POST['creamod_name'].".php";
+          // $content_inject_setting = '<div class="'.$_POST['creamod_name'].'-screen"></div>';
+          // file_put_contents($route_inject_setting, $content_inject_setting);
+          // $query_new_module = $dbh->prepare('INSERT INTO module (module_name, module_route, module_route_view, module_describe) VALUES (:name, :route, :routeview, :describe)');
+          // $query_new_module->bindParam(':name', $_POST['creamod_name']);
+          // $query_new_module->bindParam(':route', $route_inject_setting);
+          // $query_new_module->bindParam(':routeview', $route_inject);
+          // $query_new_module->bindParam(':describe', $_POST['describe_namemod']);
+          // $query_new_module->execute();
           ?>
           <div class="setting-creamod">
             <div class="result-box">
@@ -181,15 +181,15 @@ if (!empty($_POST)) {
     if ($_POST['action_gestmod'] == "modifymod") {
 
 
-      $path_del_dirmod = 'templates/modules/'.$_POST['del_namemod'];
-      $path_del_functionsmod = 'templates/modules/'.$_POST['del_namemod'].'/functions_'.$_POST['del_namemod'].'.php';
-      $path_del_settingsmod = 'templates/modules/'.$_POST['del_namemod'].'/settings_'.$_POST['del_namemod'].'.php';
-      unlink($path_del_settingsmod);
-      unlink($path_del_functionsmod);
-      rmdir($path_del_dirmod);
-      $query_delmod = $dbh->prepare('DELETE FROM module WHERE module_name = :namemod');
-      $query_delmod->bindValue(':namemod', $_POST['del_namemod']);
-      $query_delmod->execute();
+      // $path_del_dirmod = 'templates/modules/'.$_POST['del_namemod'];
+      // $path_del_functionsmod = 'templates/modules/'.$_POST['del_namemod'].'/functions_'.$_POST['del_namemod'].'.php';
+      // $path_del_settingsmod = 'templates/modules/'.$_POST['del_namemod'].'/settings_'.$_POST['del_namemod'].'.php';
+      // unlink($path_del_settingsmod);
+      // unlink($path_del_functionsmod);
+      // rmdir($path_del_dirmod);
+      // $query_delmod = $dbh->prepare('DELETE FROM module WHERE module_name = :namemod');
+      // $query_delmod->bindValue(':namemod', $_POST['del_namemod']);
+      // $query_delmod->execute();
 
       ?>
       <div class="setting-creamod">
